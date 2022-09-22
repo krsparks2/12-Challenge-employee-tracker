@@ -84,7 +84,7 @@ const updateEmp = [
 
 function menu()
 {
-    inquirer.prompt(menuQuestion).then((answer) => {
+    inquirer.prompt(mainMenu).then((answer) => {
         switch (answer.action){
             case "View Roles":
                 viewRoles()
@@ -117,3 +117,5 @@ function menu()
         }
     })
 }
+
+menu()
