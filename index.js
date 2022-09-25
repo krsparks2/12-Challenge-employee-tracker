@@ -81,6 +81,22 @@ const updateEmp = [
 // const updateRole = [
 
 // ]
+// viewRoles(){
+//     db.query('SELECT * FROM empRole', function (err, results) {
+//         console.log(results);
+//       });
+// }
+
+// viewDepartment(){
+//     db.query('SELECT * FROM department', function (err, results) {
+//         console.log(results);
+//       });
+// }
+// viewEmployees(){
+//     db.query('SELECT * FROM employee', function (err, results) {
+//         console.log(results);
+//       });
+// }
 
 function menu()
 {
@@ -117,5 +133,12 @@ function menu()
         }
     })
 }
+
+function viewRoles(){
+    db.findAllRoles().then(([data]) =>{
+        console.table(data)
+    }).then(() => menu())
+}
+
 
 menu()
