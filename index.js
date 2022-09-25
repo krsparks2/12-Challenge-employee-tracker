@@ -140,5 +140,17 @@ function viewRoles(){
     }).then(() => menu())
 }
 
+function viewDepartment(){
+    db.findAllDepartments().then(([data]) =>{
+        console.table(data)
+    }).then(() => menu())
+}
+
+function viewEmployees(){
+    db.findAllEmployees().then(([data]) =>{
+        console.table(data)
+    }).then(() => menu())
+}
+
 
 menu()
